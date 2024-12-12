@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta  name="viewport" content="width=device-width, initial-scale=1"  > 
+    <title>myBlog</title>
+    <link rel="stylesheet" href="style2.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+</head>
+<body>
+   
+  <section id="create" style="display:none;" >
+     
+        <div class="container">
+            
+           <h2 style="color:var(--primary-color);">Sign up</h2> 
+           
+           
+  
+<div class="wave-group">
+  <input required="" id="name1" type="text" class="input">
+  
+  <span class="bar"></span>
+  <label class="label">
+    <span class="label-char" style="--index: 0">N</span>
+    <span class="label-char" style="--index: 1">a</span>
+    <span class="label-char" style="--index: 2">m</span>
+    <span class="label-char" style="--index: 3">e</span>
+  </label>
+</div>  
+           
+    <div class="wave-group">
+  <input required type="password" class="input password" id="password">
+  <span class="bar"></span>
+  <label class="label">
+    <span class="label-char" style="--index: 0">P</span>
+    <span class="label-char" style="--index: 1">a</span>
+    <span class="label-char" style="--index: 2">s</span>
+    <span class="label-char" style="--index: 3">s</span>
+    <span class="label-char" style="--index: 4">w</span>
+    <span class="label-char" style="--index: 5">o</span>
+    <span class="label-char" style="--index: 6">r</span>
+    <span class="label-char" style="--index: 7">d</span>
+  </label>
+  <span class="toggle-password" onclick="togglePassword()">
+    <div id="sticker3"></div> 
+  </span>
+</div>      
+           
+     
+     
+     
+       
+          
+           
+           
+           <button id="btn1">Sign up</button>
+           
+           <p>Already have an account ? <a onclick="signIn()" href=""><p>sign in</p></a></p>
+            
+        </div>
+      
+  </section>
+   
+   
+   <section id="login" style="display:none;">
+      <div class="container">
+            
+           <h2 style="color:var(--primary-color);">Sign in</h2> 
+           
+           
+  
+<div class="wave-group">
+  <input required id="name2" type="text"  class="input">
+  <span class="bar"></span>
+  <label class="label">
+    <span class="label-char" style="--index: 0">N</span>
+    <span class="label-char" style="--index: 1">a</span>
+    <span class="label-char" style="--index: 2">m</span>
+    <span class="label-char" style="--index: 3">e</span>
+  </label>
+</div>  
+           
+    <div class="wave-group">
+  <input required type="password" class="input password" id="password2">
+  <span class="bar"></span>
+  <label class="label">
+    <span class="label-char" style="--index: 0">P</span>
+    <span class="label-char" style="--index: 1">a</span>
+    <span class="label-char" style="--index: 2">s</span>
+    <span class="label-char" style="--index: 3">s</span>
+    <span class="label-char" style="--index: 4">w</span>
+    <span class="label-char" style="--index: 5">o</span>
+    <span class="label-char" style="--index: 6">r</span>
+    <span class="label-char" style="--index: 7">d</span>
+  </label>
+  <span class="toggle-password" onclick="togglePassword2()">
+    <div id="sticker2"></div> 
+  </span>
+</div>      
+           
+     
+     <section id="errorbox" style="color:red;"></section>
+     
+       
+          
+           
+           
+           <button id="btn2">Sign in</button>
+           
+           <p>Dont have an account ? <a onclick="signUp()" href=""><p>sign up</p></a></p>
+            
+        </div>
+
+       
+   </section>
+    
+     <script>
+        // Define an array of stickers with their animation paths and container ids
+        const stickers =[{ container: 'sticker2', path: 'Eye_custom_icon.json' },
+            { container: 'sticker3', path: 'Eye_custom_icon.json' }
+        ];
+
+        // Loop through the stickers array and load each animation dynamically
+        stickers.forEach(sticker => {
+            lottie.loadAnimation({
+                container: document.getElementById(sticker.container),  // Sticker container
+                renderer: 'svg',
+                loop: true,          // Auto loop
+                autoplay: true,      // Auto play
+                path: sticker.path   // Path to the animation file (different for each sticker)
+            });
+        });
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+
+
+ .img1,.img2,.img3{
+    width:250px;
+    height:250px;
+    
+    object-fit:contain;
+    
+}
+
+.slider {
+    width: 100vw;
+    height:100vh;
+    overflow:hidden;
+    
+    
+    border-radius: 10px;
+    touch-action: pan-y; /* Enables vertical swipe but disables horizontal scrolling on touch devices */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    z-index:9;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    z-index:9;
+}
+
+.slide h2 {
+    margin: 0 0 10px;
+    color: #333;
+    
+}
+
+.slide p {
+    color: #777;
+    margin-bottom: 20px;
+   
+}
+
+
+
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    padding: 6px 0;
+    
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background: #ccc ;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for shape change */
+}
+
+.indicator.active {
+    width: 20px; /* Change to a larger width for a pill shape */
+    height: 10px; /* Keep the height the same */
+    z-index:9;
+    background:var(--secondary-color);
+    border-radius: 50px; /* Ensures the shape becomes a pill */
+}
+
+.controls {
+    display: flex;
+    justify-content: center;    
+    margin-top:50px;
+   
+}
+
+#nextButton{
+    text-align: center;
+    border: none;
+       width:8.5rem;
+       height:2.5rem;
+       cursor: pointer; 
+       font-family: inherit;
+       font-size:1rem;
+       font-weight:500;      background:var(--accent-color);
+    color:var(--background-color);
+    border-radius: 2rem;
+    }
+    
+ .control-btn{
+     z-index:9;
+ }   
+    
+#nextButton:hover {
+    background:var(--primary-color);
+}
+
+#icon{
+    width:30px;
+    height:30px;
+}
+
+
+.style{
+    width:100vw;
+    height:70vh;
+    position:absolute;
+    bottom:0;
+   
+    border-top-left-radius:10rem;
+    border-top-right-radius:10rem;
+    opacity:1;
+    z-index:.5;
+}

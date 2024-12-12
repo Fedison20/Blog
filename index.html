@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta  name="viewport" content="width=device-width, initial-scale=1"  >   
+    <title>myBlog</title>
+    
+    <link rel="stylesheet" href="style.css">
+   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+   
+</head>
+
+
+<body>
+  
+  
+ <div id="animated-icon"></div>
+ <div id="sticker2"></div>
+
+
+  
+  <div class="intro">
+      
+  <h1>my<span>blog</span></h1>
+
+<div class="img"></div>
+<div class="bolb1"></div>
+<div class="bolb2"></div>
+
+</div>
+
+ <div class="slider">
+        
+        <div class="style"></div>
+        
+        <div class="slides">
+            
+            
+        
+            
+            
+            <div class="slide" id="slide1">
+                
+                
+                <img class="img1" src="https://img.recraft.ai/kD6Uzlq_hg8pc0mSQMGqlTL1KrF0VBmE210lAJZ9bfs/rs:fit:1024:1024:0/q:80/g:no/plain/abs://prod/images/9f09339d-ae75-45cc-b58a-eb8df8a30073@avif" alt="friendly ui vector image">
+                
+                <h2> Navigate through a simple, user-friendly design.
+</h2>
+                
+         
+            </div>
+            <div class="slide" id="slide2">
+                <img class="img2" src="https://img.recraft.ai/YUQyoZ_SVhpq82TKUL-wqOJZZIgdjqkcbJG5moThHIo/rs:fit:1024:1024:0/q:80/g:no/plain/abs://prod/images/88f5502d-31d0-4b16-bd22-b398acaa9a76@avif" alt="reliable vector image">
+   
+                
+                
+
+                <h2> Trust in our secure and reliable platform.
+</h2>
+                
+            </div>
+            <div class="slide" id="slide3">
+                
+             <img class="img3" src="https://img.recraft.ai/mH844PnI_i7VooG5oC_W_Oam_hXqRkKn8gk8SuGjfkU/rs:fit:1024:1024:0/q:80/g:no/plain/abs://prod/images/a7288549-8195-4616-9399-9a5050f8cbc7@avif" alt="fast experience vector image">  
+                
+                <h2> Enjoy a fast and efficient experience</h2>
+               
+                
+            </div>
+        </div>
+        
+       <div class="indicators">
+            <span class="indicator" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+        </div>
+     
+     
+     
+        
+        <div class="controls">
+ 
+       <button onclick="nextSlide()" class="control-btn" id="nextButton">Next</button>     
+        </div> 
+        
+        
+    </div>
+
+    
+    
+    
+    <script>
+        // Define an array of stickers with their animation paths and container ids
+        const stickers = [
+            { container: 'animated-icon', path: 'Bookmark_custom_icon.json' },
+            { container: 'sticker2', path: 'Message_custom_icon.json' },
+            { container: 'sticker3', path: 'path/to/your-animation3.json' }
+        ];
+
+        // Loop through the stickers array and load each animation dynamically
+        stickers.forEach(sticker => {
+            lottie.loadAnimation({
+                container: document.getElementById(sticker.container),  // Sticker container
+                renderer: 'svg',
+                loop: true,          // Auto loop
+                autoplay: true,      // Auto play
+                path: sticker.path   // Path to the animation file (different for each sticker)
+            });
+        });
+    </script>    
+    
+    
+    <script src="onboarding.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

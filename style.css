@@ -1,0 +1,162 @@
+@import url("universal.css");
+@import url("onboarding.css");
+
+.intro{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+  background-color:var(--background-color);
+    overflow: hidden;
+    animation: disappear .4s forwards;
+    animation-delay: 2s;
+    z-index:99;
+}
+
+@keyframes disappear{
+    90%{
+        opacity: 0.7;
+    }
+    98%{
+        opacity:0.3;
+    }
+    100%{
+        display:none;
+    }
+}
+
+h1{
+   position: absolute;
+   top: 50%;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+z-index:99;
+   left: 50%;
+   font-size:2.7rem;
+   color:var(--accent-color);
+   transform: translate(-50% ,-50%);
+}
+
+span{
+padding-left: 20px;
+        animation: anim .2s .9s  forwards;
+}
+
+@keyframes anim{
+    from{
+      padding-left: 20px;
+        color:var(--accent-color);
+    }
+to{
+    color:var(--primary-color);
+  padding-left: 0px;
+}
+
+}
+
+.bolb1{
+    position: absolute;
+    bottom: -390px;
+    left:-200px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background-color:var(--secondary-color);
+}
+
+.bolb2{
+    position: absolute;
+    width:250px;
+    height: 250px;
+   top:-10%;
+   border-radius: 50%;
+   left:60%;
+    background:var(--accent-color);
+
+}
+
+#animated-icon{
+position:absolute;
+display:block;
+z-index:999;
+  top:15%;
+  left:15%;
+    width:50px;
+    height:50px;
+   animation: popUpAnimation 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+#sticker2{
+    width:50px;
+    height:50px;
+    position:absolute;
+   animation: popUpAnimation 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards; 
+}
+
+   @keyframes popUpAnimation {
+            0% {
+                transform: scale(0) translateY(-50%);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+        
+     /* From Uiverse.io by adamgiebl */ 
+.cssbuttons-io-button {
+  background: #a370f0;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #fff;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+  
+        
+        
+        
